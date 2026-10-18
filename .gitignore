@@ -1,0 +1,22 @@
+# Preview runtime data (SQLite lives here, dies with the sandbox).
+apps/api/data/*.db
+apps/api/data/*.db-*
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+
+# Secrets must never be committed (preview sandbox takes an empty env).
+.env
+.env.*
+!.env.example
+
+# Build output
+.next/
+out/
+dist/
+build/
+node_modules/
+.turbo/
+*.tsbuildinfo
+next-env.d.ts
